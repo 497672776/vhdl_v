@@ -32,7 +32,7 @@ compile:
 	@echo "==========================="
 	vhdlan -full64 -smart_order -nc -no_opt ../rtl/mux_2to1.vhd
 
-	vlogan -full64 -sverilog -nc +v2k -kdb -work WORK ${ALL_DEFINE} -f file.list
+	vlogan -full64 -sverilog -nc +v2k -kdb -work WORK -f file.list
 
 	vcs ${TOP_NAME} \
       -LDFLAGS -Wl,--no-as-needed                        \
